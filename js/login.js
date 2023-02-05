@@ -3,11 +3,11 @@ const input = document.querySelector('.login-input');
 const button = document.querySelector('.login-button');
 
 const handleSubmit = (e) => {
-  e.preventDefault()
+  e.preventDefault();
 
-  localStorage.setItem('player', input.value)
-  window.location = 'pages/game.html'
-}
+  localStorage.setItem('player', input.value);
+  window.location = 'pages/game.html';
+};
 
 const validateInput = ({ target }) => {
   target.value.length > 2
@@ -15,5 +15,5 @@ const validateInput = ({ target }) => {
     : button.setAttribute('disabled', '');
 };
 
-form.addEventListener('submit', handleSubmit)
+form.addEventListener('submit', handleSubmit);
 input.addEventListener('input', validateInput);
